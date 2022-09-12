@@ -6,10 +6,11 @@ version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;")
 echo "@edge-main https://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 echo "@edge-community http://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 echo "@edge-community-3.13 http://nl.alpinelinux.org/alpine/v3.13/community" >> /etc/apk/repositories
-apk add --update --upgrade alpine-sdk apk-tools@edge-main autoconf bash bzip2 cyrus-sasl-dev curl freetype-dev gettext git \
-    gnu-libiconv@edge-community-3.13==${ICONV_VERSION} icu-dev jq libgcrypt-dev libcrypto1.1 libjpeg-turbo-dev \
-    libmcrypt-dev libmemcached-dev libpng-dev libssh2-dev libssl1.1 libxml2-dev libxslt-dev libzip-dev make \
-    musl-dev==${MUSL_VERSION} mysql-client openssh-client patch postgresql-client postgresql-dev rsync tzdata
+apk add --update --upgrade alpine-sdk apk-tools@edge-main autoconf bash bzip2 chromium chromium-chromedriver \
+    cyrus-sasl-dev curl freetype-dev gettext git gnu-libiconv@edge-community-3.13==${ICONV_VERSION} icu-dev jq \
+    libgcrypt-dev libcrypto1.1 libjpeg-turbo-dev libmcrypt-dev libmemcached-dev libpng-dev libssh2-dev libssl1.1 \
+    libxml2-dev libxslt-dev libzip-dev make musl-dev==${MUSL_VERSION} mysql-client openssh-client patch \
+    postgresql-client postgresql-dev rsync tzdata
 echo "Done base install!"
 
 echo "Install Modd"
