@@ -1,6 +1,10 @@
 Versions
 ========
 
+2023-01-31
+----------
+* PHP: adding support for php 8.2 and removing for 7.4
+
 2022-12-31
 ----------
 * Node: Adding jq command
